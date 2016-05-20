@@ -40,7 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityLogBusinessLogic.cs" />
+    <Compile Include="Common\GenericBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpineX.BusinessLogic.Interface\SpineX.BusinessLogic.Interface.csproj">
+      <Project>{a8e3199b-2657-4d2c-a3b5-3fa99c63b6c2}</Project>
+      <Name>SpineX.BusinessLogic.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpineX.DataAccessLayer.Interface\SpineX.DataAccessLayer.Interface.csproj">
+      <Project>{2d6a2d15-7789-495d-9bfb-118845c7b0f3}</Project>
+      <Name>SpineX.DataAccessLayer.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpineX.DomainModel\SpineX.DomainModel.csproj">
+      <Project>{2f1d5908-fad4-43d5-96d5-48a96be1955b}</Project>
+      <Name>SpineX.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
