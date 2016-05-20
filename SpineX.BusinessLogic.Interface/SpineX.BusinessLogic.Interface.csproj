@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IActivityLogBusinessLogic.cs" />
+    <Compile Include="IGenericBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpineX.DomainModel\SpineX.DomainModel.csproj">
+      <Project>{2f1d5908-fad4-43d5-96d5-48a96be1955b}</Project>
+      <Name>SpineX.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
