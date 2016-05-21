@@ -36,6 +36,22 @@
     <ServiceConfiguration Include="ServiceConfiguration.Local.cscfg" />
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpineX.WebAPI\SpineX.WebAPI.csproj">
+      <Name>SpineX.WebAPI</Name>
+      <Project>{2d4854c3-ce26-4365-ac67-522d8eda43c9}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>SpineX.WebAPI</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SpineX.WebAPIContent\" />
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="SpineX.WebAPIContent\diagnostics.wadcfgx" />
+  </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>

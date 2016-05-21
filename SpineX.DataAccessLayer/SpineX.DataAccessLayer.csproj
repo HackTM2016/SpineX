@@ -51,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\GenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ActivityLogRepository.cs" />
     <Compile Include="SpineXDatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +64,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpineXDatabaseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="SpineXDatabaseModel.edmx">
@@ -88,9 +91,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpineX.DataAccessLayer.Interface\SpineX.DataAccessLayer.Interface.csproj">
+      <Project>{2d6a2d15-7789-495d-9bfb-118845c7b0f3}</Project>
+      <Name>SpineX.DataAccessLayer.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpineX.DomainModel\SpineX.DomainModel.csproj">
       <Project>{2f1d5908-fad4-43d5-96d5-48a96be1955b}</Project>
       <Name>SpineX.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpineX.IoC\SpineX.IoC.csproj">
+      <Project>{10e57d29-5324-4820-9e23-2d17a11e97a8}</Project>
+      <Name>SpineX.IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,7 +20,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="spinexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="spinexEntities" annotation:LazyLoadingEnabled="true" >
+        <EntityContainer Name="SpinexEntities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="ActivityLogs" EntityType="spinexModel.ActivityLog" />
         </EntityContainer>
         <EntityType Name="ActivityLog">
@@ -36,7 +36,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="spinexModelStoreContainer" CdmEntityContainer="spinexEntities">
+  <EntityContainerMapping StorageEntityContainer="spinexModelStoreContainer" CdmEntityContainer="SpinexEntities">
     <EntitySetMapping Name="ActivityLogs">
       <EntityTypeMapping TypeName="IsTypeOf(spinexModel.ActivityLog)">
         <MappingFragment StoreEntitySet="ActivityLogs">

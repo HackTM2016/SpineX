@@ -15,10 +15,10 @@ namespace SpineX.DataAccessLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class spinexEntities : DbContext
+    public partial class SpinexEntities : DbContext
     {
-        public spinexEntities()
-            : base("name=spinexEntities")
+        public SpinexEntities()
+            : base("name=SpinexEntities")
         {
         }
     
